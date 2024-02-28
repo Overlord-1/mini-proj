@@ -1,9 +1,11 @@
 const connectDB = require("./db/connect");
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 const url = process.env.MONG_URI;
 
 const app = express();
+app.use(cors());
 
 const login = require("./routes/login");
 const port = 4000;
