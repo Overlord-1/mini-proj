@@ -22,9 +22,10 @@ const createUser = async (req, res) => {
 
 const findUser = async (req, res) => {
   try {
-    const { email } = req.params;
-    const { password } = req.body;
+    const { email , pwd:password } = req.params;
+    // const { password } = req.body;
     console.log(password);
+    // console.log(req.body);
     const user = await User.findOne({ email: email });
     if (!user)
       return res.status(400).json({ fetch: "un-successful, usernotFound" });
