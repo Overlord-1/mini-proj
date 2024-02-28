@@ -22,8 +22,8 @@ const createUser = async (req, res) => {
 
 const findUser = async (req, res) => {
   try {
-    const { email } = req.params;
-    const { password } = req.body;
+    const { email, pwd: password } = req.params;
+    // const { password } = req.body;
     console.log(password);
     const user = await User.findOne({ email: email });
     if (!user)
