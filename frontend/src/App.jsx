@@ -1,4 +1,3 @@
-import { Tractor } from 'lucide-react';
 import React from 'react'
 import './App.css';
 import { Route, Routes } from 'react-router'
