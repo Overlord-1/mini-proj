@@ -40,19 +40,19 @@ const Login = () => {
         `http://localhost:4000/api/${formData.email}/${formData.password}`
       );
       console.log(response.data); // You can handle the response as needed
-
     } catch (error) {
       console.error("Error registering user:", error);
       setRegisterError(true);
-      setMessage(error.response.data.fetch);      
+      setMessage(error.response.data.fetch);
     }
   };
-
   return (
     <div className="main flex mx-auto items-center justify-between h-screen flex-col bg-gradient-to-b from-blue-400 to-white">
       <div className="flex mx-auto items-center justify-end md:justify-center h-screen flex-col">
         {/* <Tractor color='rgb(74 222 128)' size={70} />   //previous used logo*/}
-        <h1 className="text-6xl mb-7 mainText font-bold uppercase">Kissan</h1>
+        <h1 className="text-6xl mb-7 mainText font-bold uppercase">
+          कृषि SEVA
+        </h1>
         {registerError && (
           <p className="text-white bg-red-500 p-3 m-3 rounded-full">
             {message}
